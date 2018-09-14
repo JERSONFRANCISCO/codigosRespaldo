@@ -1,0 +1,10 @@
+Sistemas_Planificacion  ->  LlamadoSistemas  ->  CASE_Planificacion.vb
+
+
+'14/09/2018
+  Case C_OPT_SPL_GestionCasosAyuda_IngresoCasoAyuda
+    Dim Ventana As New frmABCMPL_IngresarCasoAyuda
+    Ventana.ShowDialog()
+    seguir = False
+
+'14/09/2018 fin
