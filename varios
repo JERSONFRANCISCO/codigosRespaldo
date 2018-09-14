@@ -1,7 +1,7 @@
 Sistemas_Planificación -> MenuSistemas -> SistemaPlanificacion.vb
 
 ' Incluir en el menu -----------------------------------------------------------------------------------------------
-        'Aministración casos de ayuda
+        'Administración casos de ayuda
         Agrego = False
         TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Add(ObtieneOpcionMenu( _
             GlobalAppName, "Aministración casos de ayuda", "", lInfoModulo, C_OPT_SPL_AdminCasosAyuda, InfoConn, -1, AplicaSeguridad, ResultadoOpt))
