@@ -1,1 +1,65 @@
+Sistemas_Planificación -> MenuSistemas -> SistemaPlanificacion.vb
 
+' Incluir en el menu -----------------------------------------------------------------------------------------------
+        'Aministración casos de ayuda
+        Agrego = False
+        TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Add(ObtieneOpcionMenu( _
+            GlobalAppName, "Aministración casos de ayuda", "", lInfoModulo, C_OPT_SPL_AdminCasosAyuda, InfoConn, -1, AplicaSeguridad, ResultadoOpt))
+        Agrego = (Agrego Or ResultadoOpt)
+
+        TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Item(oMenuTrack.NumeroNodoModulo).Nodes.Add(ObtieneOpcionMenu( _
+            GlobalAppName, "Ingresar Categorias", "Ingresar Categorias", lInfoModulo, C_OPT_SPL_AdminCasosAyuda_IngresoCategorias, InfoConn, 10, AplicaSeguridad, ResultadoOpt))
+        Agrego = (Agrego Or ResultadoOpt)
+
+        TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Item(oMenuTrack.NumeroNodoModulo).Nodes.Add(ObtieneOpcionMenu( _
+            GlobalAppName, "Registrar Correos", "Registrar Correos", lInfoModulo, C_OPT_SPL_AdminCasosAyuda_RegistroCorreos, InfoConn, 10, AplicaSeguridad, ResultadoOpt))
+        Agrego = (Agrego Or ResultadoOpt)
+
+        If Agrego Then
+            oMenuTrack.NumeroNodoModulo += 1
+        End If
+
+        'Gestión de casos de ayuda
+        Agrego = False
+        TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Add(ObtieneOpcionMenu( _
+            GlobalAppName, "Gestión de casos de ayuda", "", lInfoModulo, C_OPT_SPL_GestionCasosAyuda, InfoConn, -1, AplicaSeguridad, ResultadoOpt))
+        Agrego = (Agrego Or ResultadoOpt)
+
+        TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Item(oMenuTrack.NumeroNodoModulo).Nodes.Add(ObtieneOpcionMenu( _
+            GlobalAppName, "Ingreso de casos de ayuda", "Ingreso de casos de ayuda", lInfoModulo, C_OPT_SPL_GestionCasosAyuda_IngresoCasoAyuda, InfoConn, 10, AplicaSeguridad, ResultadoOpt))
+        Agrego = (Agrego Or ResultadoOpt)
+
+        TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Item(oMenuTrack.NumeroNodoModulo).Nodes.Add(ObtieneOpcionMenu( _
+            GlobalAppName, "Casos de ayuda ingresados", "Casos de ayuda ingresados", lInfoModulo, C_OPT_SPL_GestionCasosAyuda_CasoAyudaIngresados, InfoConn, 10, AplicaSeguridad, ResultadoOpt))
+        Agrego = (Agrego Or ResultadoOpt)
+
+        TvMenu.Nodes(oMenuTrack.NumeroNodo).Nodes.Item(oMenuTrack.NumeroNodoModulo).Nodes.Add(ObtieneOpcionMenu( _
+            GlobalAppName, "Seguimiento de casos de ayuda", "Seguimiento de casos de ayuda", lInfoModulo, C_OPT_SPL_GestionCasosAyuda_SeguimientoCasosAyuda, InfoConn, 10, AplicaSeguridad, ResultadoOpt))
+        Agrego = (Agrego Or ResultadoOpt)
+
+        If Agrego Then
+            oMenuTrack.NumeroNodoModulo += 1
+        End If
+
+        '-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+Sistemas_Planificación -> MenuSistemas -> IdsSeguridad.vb
+
+
+'14/9/2018
+
+    Public Const C_OPT_SPL_AdminCasosAyuda = 92
+    Public Const C_OPT_SPL_AdminCasosAyuda_IngresoCategorias = 93
+    Public Const C_OPT_SPL_AdminCasosAyuda_RegistroCorreos = 94
+
+    Public Const C_OPT_SPL_GestionCasosAyuda = 95
+    Public Const C_OPT_SPL_GestionCasosAyuda_IngresoCasoAyuda = 96
+    Public Const C_OPT_SPL_GestionCasosAyuda_CasoAyudaIngresados = 97
+    Public Const C_OPT_SPL_GestionCasosAyuda_SeguimientoCasosAyuda = 98
+
+' fin 14/9/2018
