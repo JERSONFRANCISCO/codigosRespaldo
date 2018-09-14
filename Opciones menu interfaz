@@ -1,0 +1,16 @@
+
+Sistemas_Planificación -> MenuSistemas -> IdsSeguridad.vb
+
+
+'14/9/2018
+
+    Public Const C_OPT_SPL_AdminCasosAyuda = 92
+    Public Const C_OPT_SPL_AdminCasosAyuda_IngresoCategorias = 93
+    Public Const C_OPT_SPL_AdminCasosAyuda_RegistroCorreos = 94
+
+    Public Const C_OPT_SPL_GestionCasosAyuda = 95
+    Public Const C_OPT_SPL_GestionCasosAyuda_IngresoCasoAyuda = 96
+    Public Const C_OPT_SPL_GestionCasosAyuda_CasoAyudaIngresados = 97
+    Public Const C_OPT_SPL_GestionCasosAyuda_SeguimientoCasosAyuda = 98
+
+' fin 14/9/2018
