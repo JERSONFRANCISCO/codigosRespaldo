@@ -4,7 +4,7 @@ CREATE TABLE dbo.MPL_CategoriasCasosAyudaPAR
 (
     ID_Categoria     int         IDENTITY,
     DE_Categoria     text        NOT NULL,
-    ES_EstadoCorreos varchar(1)  NOT NULL,
+    ES_Estado varchar(1)  NOT NULL,
     FK_CedulaUsuario varchar(12) NULL
 )
 LOCK ALLPAGES
