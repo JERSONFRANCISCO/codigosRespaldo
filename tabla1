@@ -1,0 +1,12 @@
+CREATE TABLE dbo.MPL_CorreosPAR
+(
+    CO_MPL_Correos   int         IDENTITY,
+    DE_Correo        varchar(50) NOT NULL,
+    ES_EstadoCorreos varchar(1)  NOT NULL,
+    FK_CedulaUsuario varchar(12) NULL,
+    CONSTRAINT CKC_ES_EstadoCorreos
+    CHECK (ES_EstadoCorreos in ('I','A'))
+)
+
+
+
