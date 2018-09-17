@@ -8,3 +8,32 @@ Sistemas_Planificacion  ->  LlamadoSistemas  ->  CASE_Planificacion.vb
     seguir = False
 
 '14/09/2018 fin
+
+
+
+
+                    'Incliur planificacion
+
+                Case C_OPT_SPL_AdminCasosAyuda_IngresoCategorias
+                    Dim Ventana As New frmABCMPL_IngresarCategoria
+                    Ventana.Modo = UsrPlanificacion.EditorBase.TModo.Agregar
+                    Ventana.varTipoRegistroProgramacion = "R"
+                    Ventana.ShowDialog()
+                    seguir = False
+
+                Case C_OPT_SPL_GestionCasosAyuda_CasoAyudaIngresados
+                    Dim Ventana As New frmABCMPL_CasosAyudaIngresados
+                    Ventana.Modo = UsrPlanificacion.EditorBase.TModo.Agregar
+                    Ventana.varTipoRegistroProgramacion = "R"
+                    Ventana.ShowDialog()
+                    seguir = False
+
+                Case C_OPT_SPL_GestionCasosAyuda_SeguimientoCasosAyuda
+                    Dim Ventana As New frmABCMPL_CasosAyudaAsignados
+                    Ventana.Modo = UsrPlanificacion.EditorBase.TModo.Agregar
+                    Ventana.varTipoRegistroProgramacion = "R"
+                    Ventana.ShowDialog()
+                    seguir = False
+
+
+                    'Fin Incluir Planificacion
