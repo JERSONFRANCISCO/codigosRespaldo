@@ -1,18 +1,16 @@
 USE planificacion_db
 go
-CREATE TABLE dbo.MPL_CorreosPAR
+CREATE TABLE dbo.MPL_CategoriasCasosAyudaPAR
 (
-    CO_MPL_Correos   int         IDENTITY,
-    DE_Corroe        varchar(20) NOT NULL,
+    ID_Categoria     int         IDENTITY,
+    DE_Categoria     text        NOT NULL,
     ES_EstadoCorreos varchar(1)  NOT NULL,
-    FK_CedulaUsuario varchar(12) NULL,
-    CONSTRAINT CKC_ES_EstadoCorreos
-    CHECK (ES_EstadoCorreos in ('I','A'))
+    FK_CedulaUsuario varchar(12) NULL
 )
 LOCK ALLPAGES
 go
-IF OBJECT_ID('dbo.MPL_CorreosPAR') IS NOT NULL
-    PRINT '<<< CREATED TABLE dbo.MPL_CorreosPAR >>>'
+IF OBJECT_ID('dbo.MPL_CategoriasCasosAyudaPAR') IS NOT NULL
+    PRINT '<<< CREATED TABLE dbo.MPL_CategoriasCasosAyudaPAR >>>'
 ELSE
-    PRINT '<<< FAILED CREATING TABLE dbo.MPL_CorreosPAR >>>'
+    PRINT '<<< FAILED CREATING TABLE dbo.MPL_CategoriasCasosAyudaPAR >>>'
 go
