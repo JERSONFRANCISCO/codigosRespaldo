@@ -1,3 +1,20 @@
+create table MPL_CasosAyudaMOV
+(
+    idMPL_CasosAyuda int identity ,
+    ID_Categoria int not null,
+    FE_Ingreso Date not null,
+    DE_Descripcion text not null,
+    usuarioExperto varchar(20),
+    FK_CedulaUsuario varchar(20),
+    ES_EstadoCasoAyuda varchar(1),
+    FE_FechaFinalizacion DATE,
+    
+    CONSTRAINT CKC_ES_EstadoCasoAyuda
+    CHECK (ES_EstadoCasoAyuda in ('I','P','F')),
+    CONSTRAINT MPL_CasosAyudaMOV
+    PRIMARY KEY CLUSTERED (ID_Categoria)
+)
+
 CREATE TABLE dbo.MPL_CorreosPAR
 (
     CO_MPL_Correos   int         IDENTITY,
@@ -9,4 +26,12 @@ CREATE TABLE dbo.MPL_CorreosPAR
 )
 
 
-
+CREATE TABLE dbo.MPL_CategoriasCasosAyudaPAR
+(
+    ID_Categoria     int         IDENTITY,
+    DE_Categoria     text        NOT NULL,
+    ES_Estado        varchar(1)  NOT NULL,
+    FK_CedulaUsuario varchar(12) NULL,
+    CONSTRAINT MPL_CategoriasCasosAyudaPAR
+    PRIMARY KEY CLUSTERED (ID_Categoria)
+)
